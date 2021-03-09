@@ -2,8 +2,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
   <display-name>Archetype Created Web Application</display-name>
+  <!-- V1 SERVLERTS -->
   <servlet>
-    <servlet-name>homeServlet</servlet-name>
-    <servlet-class>edu.java.intermediate.exercise2.servlet.HomeServlet</servlet-class>
+    <servlet-name>ListContactServlet</servlet-name>
+    <servlet-class>edu.java.intermediate.exercise2.servlet.ListContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewContactServlet</servlet-name>
+    <servlet-class>edu.java.intermediate.exercise2.servlet.ViewContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SaveContactServlet</servlet-name>
+    <servlet-class>edu.java.intermediate.exercise2.servlet.SaveContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FormContactServlet</servlet-name>
+    <servlet-class>edu.java.intermediate.exercise2.servlet.FormContactServlet</servlet-class>
+  </servlet>
+  <!-- V2 -->
+  <servlet>
+    <servlet-name>ListContactServlet2</servlet-name>
+    <servlet-class>edu.java.intermediate.exercise2.servlet2.ListContactServlet</servlet-class>
   </servlet>
 </web-app>
