@@ -3,7 +3,6 @@ package edu.java.intermediate.exercise2.servlets2;
 import edu.java.intermediate.exercise2.models.Contact;
 import edu.java.intermediate.exercise2.repositories.ContactRepository;
 
-import javax.servlet.DispatcherType;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -12,10 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet("/v2/contacts")
-public class ListContactServlet extends HttpServlet {
+@WebServlet("/v2/contacts/view")
+public class ViewContactServlet extends HttpServlet {
 
     private ContactRepository repository;
 
@@ -26,11 +24,15 @@ public class ListContactServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("../contacts/list.jsp");
-        List<Contact> contacts = this.repository.getContact();
+        RequestDispatcher dispatcher = req.getRequestDispatcher("../../contacts/view.jsp");
+        String strId = req.getParameter("id");
 
-        req.setAttribute("contacts", contacts);
+        for (int index = 0; index < this.repository.getContact().size(); index++) {
+            if(this.repository.getContact().get(index).getId() == Integer.parseInt(strId)){
+                req.setAttribute("contact",this.repository.getContact().get(index));
+                index = this.repository.getContact().size();
+            }
+        }
         dispatcher.forward(req, resp);
-
     }
 }

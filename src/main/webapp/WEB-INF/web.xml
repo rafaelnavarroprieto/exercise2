@@ -22,6 +22,18 @@
   <!-- V2 -->
   <servlet>
     <servlet-name>ListContactServlet2</servlet-name>
-    <servlet-class>edu.java.intermediate.exercise2.servlet2.ListContactServlet</servlet-class>
+    <servlet-class>edu.java.intermediate.exercise2.servlets2.ListContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FormContactServlet2</servlet-name>
+    <servlet-class>edu.java.intermediate.exercise2.servlets2.FormContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SaveContactServlet2</servlet-name>
+    <servlet-class>edu.java.intermediate.exercise2.servlets2.SaveContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewContactServlet2</servlet-name>
+    <servlet-class>edu.java.intermediate.exercise2.servlets2.ViewContactServlet</servlet-class>
   </servlet>
 </web-app>

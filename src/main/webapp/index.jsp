@@ -2,7 +2,7 @@
 <html>
     <body>
         <h2>Hello World!</h2>
-        <a href="./home">Home</a>
+        <a href="./contacts">Contactos</a>
 
         <%! List<String> strings = new ArrayList<String>(); %>
         <%
